@@ -1,24 +1,86 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="bNo-oE-oWY">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
-        <scene sceneID="tne-QT-ifu">
+        <scene sceneID="cfL-C6-uGl">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                <viewController id="bNo-oE-oWY" customClass="ViewController" customModule="AnimationApp" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="WWU-Ld-9sW">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" xcode11CocoaTouchSystemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
-                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="PBG-EP-Ue7" customClass="SpringView" customModule="Spring">
+                                <rect key="frame" x="62" y="84" width="290" height="161.5"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Animation parameters" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="S4M-ht-Gic">
+                                        <rect key="frame" x="5" y="5" width="280" height="151.5"/>
+                                        <fontDescription key="fontDescription" style="UICTFontTextStyleTitle3"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="bottom" secondItem="S4M-ht-Gic" secondAttribute="bottom" constant="5" id="9FD-XR-PHe"/>
+                                    <constraint firstItem="S4M-ht-Gic" firstAttribute="leading" secondItem="PBG-EP-Ue7" secondAttribute="leading" constant="5" id="Ta7-iJ-2Oh"/>
+                                    <constraint firstAttribute="trailing" secondItem="S4M-ht-Gic" secondAttribute="trailing" constant="5" id="Xjs-oC-mVF"/>
+                                    <constraint firstItem="S4M-ht-Gic" firstAttribute="top" secondItem="PBG-EP-Ue7" secondAttribute="top" constant="5" id="pmT-lE-d9y"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <integer key="value" value="15"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AfK-JS-RdB">
+                                <rect key="frame" x="62" y="787" width="290" height="35"/>
+                                <color key="backgroundColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <fontDescription key="fontDescription" style="UICTFontTextStyleTitle2"/>
+                                <state key="normal" title="Run">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <integer key="value" value="10"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="animationButtonPressed:" destination="bNo-oE-oWY" eventType="touchUpInside" id="e93-hF-p54"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="Y9y-by-j23"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="PBG-EP-Ue7" firstAttribute="height" secondItem="WWU-Ld-9sW" secondAttribute="height" multiplier="0.18" id="5lr-oo-Dk1"/>
+                            <constraint firstItem="PBG-EP-Ue7" firstAttribute="width" secondItem="WWU-Ld-9sW" secondAttribute="width" multiplier="0.7" id="9iU-s0-6hb"/>
+                            <constraint firstItem="AfK-JS-RdB" firstAttribute="centerX" secondItem="Y9y-by-j23" secondAttribute="centerX" id="Q7K-XR-9OL"/>
+                            <constraint firstItem="Y9y-by-j23" firstAttribute="bottom" secondItem="AfK-JS-RdB" secondAttribute="bottom" constant="40" id="XG5-cp-A6J"/>
+                            <constraint firstItem="AfK-JS-RdB" firstAttribute="width" secondItem="PBG-EP-Ue7" secondAttribute="width" id="sK1-dh-idA"/>
+                            <constraint firstItem="PBG-EP-Ue7" firstAttribute="top" secondItem="Y9y-by-j23" secondAttribute="top" constant="40" id="u9h-wv-0P7"/>
+                            <constraint firstItem="PBG-EP-Ue7" firstAttribute="centerX" secondItem="Y9y-by-j23" secondAttribute="centerX" id="ubd-lN-cIz"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="animationLabel" destination="S4M-ht-Gic" id="gQ0-gS-YfN"/>
+                        <outlet property="animationView" destination="PBG-EP-Ue7" id="Kd1-vh-S1z"/>
+                    </connections>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="K9F-tN-qgM" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="137.68115942028987" y="137.94642857142856"/>
         </scene>
     </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
 </document>
