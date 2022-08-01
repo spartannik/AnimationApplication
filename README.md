@@ -4,4 +4,4 @@
 
 Стек: MVP,Cacaopods(Spring).
 
-<img src="https://user-images.githubusercontent.com/70599404/163043143-1b50525e-3f73-4058-a714-f7db6ba451d8.png" height="420" width="210" >
+<img src=https://user-images.githubusercontent.com/54499958/182140704-9983dd9f-eaf4-42dc-874f-5b9ea5fda560.jpeg >
